@@ -1,6 +1,7 @@
 'use client';
 
 import { AuthModal, Modal } from '@/app/components/Modal';
+import UploadModal from '@/app/components/Modal/UploadModal';
 import { useEffect, useState } from 'react';
 
 const ModalProvider = () => {
@@ -16,6 +17,7 @@ const ModalProvider = () => {
     return (
         <>
             <AuthModal />
+            <UploadModal />
         </>
     );
 };
