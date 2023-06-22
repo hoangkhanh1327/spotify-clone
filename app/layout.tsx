@@ -9,11 +9,12 @@ import './globals.css';
 import { Figtree } from 'next/font/google';
 import getSongsByUserId from '@/actions/getSongsByUserId';
 import { Player } from '@/components/Player';
+import getActiveProductsPrices from '@/actions/getActiveProductsPrices';
 
 const font = Figtree({ subsets: ['latin'] });
 
 export const metadata = {
-    title: 'Assistant',
+    title: 'K-Music',
     description: 'Happy Listening',
 };
 
@@ -25,13 +26,15 @@ export default async function RootLayout({
     children: React.ReactNode;
 }) {
     const userSongs = await getSongsByUserId();
+    const products = await getActiveProductsPrices();
+
     return (
         <html lang='en'>
             <body className={font.className}>
                 <ToasterProvider />
                 <SupabaseProvider>
                     <UserProvider>
-                        <ModalProvider />
+                        <ModalProvider products={products} />
                         <Sidebar songs={userSongs}>{children}</Sidebar>
                         <Player />
                     </UserProvider>

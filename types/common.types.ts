@@ -23,6 +23,7 @@ export interface Prices {
     id: string;
     product_id?: string;
     description?: string;
+    active: boolean;
     unit_amount?: number;
     currency?: string;
     type?: Stripe.Price.Type;
@@ -51,4 +52,8 @@ export interface Subscription {
     trial_end?: string;
     error?: any;
     prices?: PromiseConstructor;
+}
+
+export interface ProductWithPrice extends Product {
+    prices?: Prices[];
 }
