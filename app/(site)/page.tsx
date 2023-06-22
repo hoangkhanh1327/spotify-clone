@@ -1,8 +1,8 @@
-import getSongs from '@/actions/getSong';
-import { Header, ListItem } from '../components/Generals';
+import getSongs from '@/actions/getSongs';
 import PageContent from './components/PageContent';
+import { Header, ListItem } from '@/components/Generals';
 
-const revalidate = 0;
+export const revalidate = 0;
 
 export default async function Home() {
     const songs = await getSongs();

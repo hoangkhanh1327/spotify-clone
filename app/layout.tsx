@@ -4,9 +4,11 @@ import {
     ToasterProvider,
     UserProvider,
 } from '@/providers';
-import { Sidebar } from './components/Generals';
+import { Sidebar } from '../components/Generals';
 import './globals.css';
 import { Figtree } from 'next/font/google';
+import getSongsByUserId from '@/actions/getSongsByUserId';
+import { Player } from '@/components/Player';
 
 const font = Figtree({ subsets: ['latin'] });
 
@@ -15,11 +17,14 @@ export const metadata = {
     description: 'Happy Listening',
 };
 
-export default function RootLayout({
+export const revalidate = 0;
+
+export default async function RootLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    const userSongs = await getSongsByUserId();
     return (
         <html lang='en'>
             <body className={font.className}>
@@ -27,7 +32,8 @@ export default function RootLayout({
                 <SupabaseProvider>
                     <UserProvider>
                         <ModalProvider />
-                        <Sidebar>{children}</Sidebar>
+                        <Sidebar songs={userSongs}>{children}</Sidebar>
+                        <Player />
                     </UserProvider>
                 </SupabaseProvider>
             </body>
