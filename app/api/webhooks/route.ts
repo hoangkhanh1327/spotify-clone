@@ -20,12 +20,6 @@ const relevantEvents = new Set([
     'customer.subscription.deleted',
 ]);
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
-
 export async function POST(request: Request) {
     const body = await request.text();
     const sig = headers().get('Stripe-Signature');
