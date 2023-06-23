@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import React, { useMemo } from 'react';
 import { HiHome } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
@@ -23,14 +23,14 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
             {
                 icon: HiHome,
                 label: 'Trang chủ',
-                active: pathname !== '/search',
+                active: pathname !== '/tim-kiem',
                 href: '/',
             },
             {
                 icon: BiSearch,
                 label: 'Tìm kiếm',
-                active: pathname === '/search',
-                href: '/search',
+                active: pathname === '/tim-kiem',
+                href: '/tim-kiem',
             },
         ];
     }, [pathname]);

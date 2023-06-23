@@ -39,7 +39,7 @@ export async function POST(request: Request) {
                 trial_from_plan: true,
                 metadata,
             },
-            success_url: `${getUrl()}/account`,
+            success_url: `${getUrl()}/thong-tin-tai-khoan`,
             cancel_url: `${getUrl()}`,
         });
 
