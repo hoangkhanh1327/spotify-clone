@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/app/components/Generals';
-import { postData } from '@/helpers/helpers';
+import { postData } from '@/app/helpers/helpers';
 import useSubcribeModal from '@/app/hooks/useSubcribeModal';
 import { useUser } from '@/app/hooks/useUser';
 import { useRouter } from 'next/navigation';

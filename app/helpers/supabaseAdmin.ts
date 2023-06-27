@@ -1,7 +1,7 @@
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 
-import { Database } from '@/app/types_db';
+import { Database } from '@/types_db';
 import { Prices, Product } from '@/app/types';
 
 import { stripe } from './stripe';
