@@ -1,5 +1,5 @@
-import { SearchInput } from '@/components/Form';
-import { Header } from '@/components/Generals';
+import { SearchInput } from '@/app/components/Form';
+import { Header } from '@/app/components/Generals';
 import AccountContent from './components/AccountContent';
 
 interface AccountProps {

@@ -1,5 +1,5 @@
-import getLikedSongs from '@/actions/getLikedSongs';
-import { Header } from '@/components/Generals';
+import getLikedSongs from '@/app/actions/getLikedSongs';
+import { Header } from '@/app/components/Generals';
 import Image from 'next/image';
 import LikedContent from './components/LikedContent';
 

@@ -1,6 +1,6 @@
-import getSongs from '@/actions/getSongs';
+import getSongs from '@/app/actions/getSongs';
 import PageContent from './components/PageContent';
-import { Header, ListItem } from '@/components/Generals';
+import { Header, ListItem } from '@/app/components/Generals';
 
 export const revalidate = 0;
 

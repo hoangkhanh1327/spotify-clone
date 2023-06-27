@@ -1,6 +1,6 @@
-import getSongsByTitle from '@/actions/getSongsByTitle';
-import { SearchInput } from '@/components/Form';
-import { Header } from '@/components/Generals';
+import getSongsByTitle from '@/app/actions/getSongsByTitle';
+import { SearchInput } from '@/app/components/Form';
+import { Header } from '@/app/components/Generals';
 import SearchContent from './components/SearchContent';
 
 interface SearchProps {

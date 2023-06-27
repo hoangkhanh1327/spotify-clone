@@ -1,8 +1,8 @@
 'use client';
 
-import { PlayButton } from '@/components/Libraries';
-import useLoadImage from '@/hooks/useLoadImage';
-import { Song } from '@/types';
+import { PlayButton } from '@/app/components/Libraries';
+import useLoadImage from '@/app/hooks/useLoadImage';
+import { Song } from '@/app/types';
 import Image from 'next/image';
 
 interface SongItemProps {

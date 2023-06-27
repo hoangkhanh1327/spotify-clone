@@ -3,13 +3,13 @@ import {
     SupabaseProvider,
     ToasterProvider,
     UserProvider,
-} from '@/providers';
-import { Sidebar } from '../components/Generals';
+} from '@/app/providers';
+import { Sidebar } from '@/app/components/Generals';
 import './globals.css';
 import { Figtree } from 'next/font/google';
-import getSongsByUserId from '@/actions/getSongsByUserId';
-import { Player } from '@/components/Player';
-import getActiveProductsPrices from '@/actions/getActiveProductsPrices';
+import getSongsByUserId from '@/app/actions/getSongsByUserId';
+import { Player } from '@/app/components/Player';
+import getActiveProductsPrices from '@/app/actions/getActiveProductsPrices';
 
 const font = Figtree({ subsets: ['latin'] });
 

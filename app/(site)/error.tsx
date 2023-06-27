@@ -1,6 +1,6 @@
 'use client';
 
-import { Box } from '@/components/Generals';
+import { Box } from '@/app/components/Generals';
 
 const Error = () => {
     return (
