@@ -2,9 +2,9 @@ import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { headers, cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 
-import { stripe } from '@/helpers/stripe';
-import { getUrl } from '@/helpers/helpers';
-import { createOrderRetrieveACustomer } from '@/helpers/supabaseAdmin';
+import { stripe } from '@/app/helpers/stripe';
+import { getUrl } from '@/app/helpers/helpers';
+import { createOrderRetrieveACustomer } from '@/app/helpers/supabaseAdmin';
 
 export async function POST(request: Request) {
     const { price, quantity = 1, metadata = {} } = await request.json();
